@@ -8,6 +8,10 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+app.get('/', (req, res) => {
+    res.send('Hello World! 😁 🎈');
+});
+
 const routs = require('./routes/routes_index');
 app.use('/api', routs);
 
